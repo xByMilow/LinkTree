@@ -1,92 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>xByMilow</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/icon.png" type="image/png">
-    <link rel="stylesheet" href="/assets/css/index.min.css">
-    <script src="/assets/js/index.min.js"></script>
-    <script src="/assets/js/sparkles.min.js"></script>
-    <script src="/assets/js/parallax.min.js" defer></script>
-    <script src="/assets/js/shootingstars.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xByMilow</title>
+  <link rel="icon" href="/assets/icon.png" type="image/png" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/css/index.css" />
+
+  <script src="/assets/js/index.min.js" defer></script>
+  <script src="/assets/js/sparkles.min.js" defer></script>
+  <script src="/assets/js/parallax.min.js" defer></script>
+  <script src="/assets/js/shootingstars.min.js" defer></script>
 </head>
 <body class="center-screen wallpaper">
-    <div class="click">
-        <h1>Click to enter</h1>
+  
+  <div class="click">
+    <h1>Click to enter</h1>
+  </div>
+
+  <main class="center-box">
+    
+    <section class="profile-section">
+      <div class="pfp">
+        <img src="/assets/xbymilow.png" alt="xByMilow Profile Picture" />
+      </div>
+      
+      <div class="profile-info">
+        <div class="username-icons">
+          <div class="username">xByMilow</div>
+          
+          <div class="icon-box">
+            <div class="icon">
+              <img src="/assets/images/icons/dev.png" alt="Dev" />
+              <span class="tooltip">Developer</span>
+            </div>
+            <div class="icon">
+              <img src="/assets/images/icons/hypesquad.png" alt="HypeSquad" />
+              <span class="tooltip">HypeSquad (Bravery)</span>
+            </div>
+            <div class="icon">
+              <img src="/assets/images/icons/bug.png" alt="Bug Finder" />
+              <span class="tooltip">Bug Finder</span>
+            </div>
+            <div class="icon">
+              <img src="/assets/images/icons/matrix.png" alt="Matrix Client" />
+              <span class="tooltip">Matrix Client</span>
+            </div>
+          </div>
+        </div>
+        <div id="quote" class="quote-text"></div>
+      </div>
+    </section>
+
+    <div class="info-box">
+      <img src="/assets/images/icons/map.png" alt="Location Icon" /> Krypex HQ
     </div>
 
-    <div class="center-box">
-        <div class="profile-section">
-            <div class="pfp">
-                <img src="/assets/xbymilow.png" alt="xByMilow">
-            </div>
-            <div class="profile-info">
-                <div class="username-icons">
-                    <div class="username">xByMilow</div>
-                    <div class="icon-box">
-                        <div class="icon">
-                            <img src="/assets/images/icons/dev.png" alt="Dev">
-                            <span class="tooltip">Developer</span>
-                        </div>
-                        <div class="icon">
-                            <img src="/assets/images/icons/hypesquad.png" alt="Hypesquad">
-                            <span class="tooltip">HypeSquad (Bravery)</span>
-                        </div>
-                        <div class="icon">
-                            <img src="/assets/images/icons/bug.png" alt="Bug">
-                            <span class="tooltip">Bug Finder</span>
-                        </div>
-                        <div class="icon">
-                            <img src="/assets/images/icons/matrix.png" alt="Matrix Client">
-                            <span class="tooltip">Matrix Client</span>
-                        </div>
-                    </div>                                          
-                </div>
-                <div id="quote" class="quote-text"></div>
-            </div>
-        </div>
-        
-        <div class="info-box">
-            <img src="/assets/images/icons/map.png" alt="Map"> Krypex HQ
-        </div>
+    <section class="socials">
+      <a href="https://di.scord.me/krypex" class="icon-container">
+        <img src="/assets/images/socials/discord.svg" alt="Discord" />
+        <span class="tooltip">Discord</span>
+      </a>
+      <a href="https://x.com/xbymilow" class="icon-container">
+        <img src="/assets/images/socials/x.svg" alt="X / Twitter" />
+        <span class="tooltip">X</span>
+      </a>
+      <a href="https://github.com/xbymilow" class="icon-container">
+        <img src="/assets/images/socials/github.svg" alt="GitHub" />
+        <span class="tooltip">GitHub</span>
+      </a>
+      <a href="https://youtube.com/@xbymilow" class="icon-container">
+        <img src="/assets/images/socials/youtube.svg" alt="YouTube" />
+        <span class="tooltip">YouTube</span>
+      </a>
+      <a href="https://open.spotify.com/user/31hejscqiwezlbvgy3vv2odiu3wi?si=76508e581e064b01" class="icon-container">
+        <img src="/assets/images/socials/spotify.svg" alt="Spotify" />
+        <span class="tooltip">Spotify</span>
+      </a>
+      <a href="https://signal.me/#eu/ex8JkIVdkPRBjH7-Osp3i9ex4BLxbvQJF1JmWxUKwv-GRRbFb-pKm5k8iH6LhjBs" class="icon-container">
+        <img src="/assets/images/socials/signal.svg" alt="Signal" />
+        <span class="tooltip">Signal</span>
+      </a>
+      <a href="https://twitch.tv/xbymilow" class="icon-container">
+        <img src="/assets/images/socials/twitch.svg" alt="Twitch" />
+        <span class="tooltip">Twitch</span>
+      </a>
+      <a href="https://steamcommunity.com/id/xByMilow/" class="icon-container">
+        <img src="/assets/images/socials/steam.svg" alt="Steam" />
+        <span class="tooltip">Steam</span>
+      </a>
+    </section>
 
-        <div class="socials">
-            <a href="https://di.scord.me/krypex" class="icon-container">
-                <img src="/assets/images/socials/discord.svg" alt="Discord">
-                <span class="tooltip">Discord</span>
-            </a>
-            <a href="https://x.com/xbymilow" class="icon-container">
-                <img src="/assets/images/socials/x.svg" alt="">
-                <span class="tooltip">X</span>
-            </a>
-            <a href="https://github.com/xbymilow" class="icon-container">
-                <img src="/assets/images/socials/github.svg" alt="GitHub">
-                <span class="tooltip">GitHub</span>
-            </a>
-            <a href="https://youtube.com/@xbymilow" class="icon-container">
-                <img src="/assets/images/socials/youtube.svg" alt="YouTube">
-                <span class="tooltip">YouTube</span>
-            </a>
-            <a href="https://open.spotify.com/user/31hejscqiwezlbvgy3vv2odiu3wi?si=76508e581e064b01" class="icon-container">
-                <img src="/assets/images/socials/spotify.svg" alt="Spotify">
-                <span class="tooltip">Spotify</span>
-            </a>
-            <a href="https://signal.me/#eu/ex8JkIVdkPRBjH7-Osp3i9ex4BLxbvQJF1JmWxUKwv-GRRbFb-pKm5k8iH6LhjBs" class="icon-container">
-                <img src="/assets/images/socials/signal.svg" alt="Signal">
-                <span class="tooltip">Signal</span>
-            </a>
-            <a href="https://twitch.tv/xbymilow" class="icon-container">
-                <img src="/assets/images/socials/twitch.svg" alt="Twitch">
-                <span class="tooltip">Twitch</span>
-            </a>
-            <a href="https://steamcommunity.com/id/xByMilow/" class="icon-container">
-                <img src="/assets/images/socials/steam.svg" alt="Steam">
-                <span class="tooltip">Steam</span>
-            </a>
-        </div>                
-    </div>
+  </main>
 </body>
 </html>
