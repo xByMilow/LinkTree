@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCREEN_NAME="Homepage"
+SCREEN_NAME="omepage"
 
 if [ "$STY" ]; then
   exit 1
