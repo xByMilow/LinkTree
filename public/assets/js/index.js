@@ -1,4 +1,3 @@
-let musicPlayed = false;
 let wallpaperLoaded = false;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -22,7 +21,6 @@ function setWallpaper() {
         wallpaperElement.prepend(backgroundContent);
     }
 
-    // Überprüfen, ob das Video schon existiert
     let videoElement = backgroundContent.querySelector(".background-video");
     if (!videoElement) {
         videoElement = document.createElement("video");
@@ -58,31 +56,6 @@ function setWallpaper() {
 
     wallpaperLoaded = true;
 }
-
-
-function playMusic() {
-    if (musicPlayed) return;
-
-    const musicList = [
-        "/assets/music/The New Workout Plan - Kanye West.mp3",
-        "/assets/music/TORE UP - Don Toliver.mp3",
-        "/assets/music/HARDY BOYS - mikeeysmind.mp3",
-        "/assets/music/Off The Grid - Kanye West.mp3",
-        "/assets/music/LUST. - Kendrick Lamar.mp3",
-        "/assets/music/Dark Fantasy - Kanye West.mp3"
-    ];
-
-    const randomSong = musicList[Math.floor(Math.random() * musicList.length)];
-
-    const audio = new Audio(randomSong);
-    audio.loop = true;
-    audio.volume = 0.45;
-    audio.play().catch(error => {
-    });
-
-    musicPlayed = true;
-}
-
 
 function enterSite() {
     document.querySelector(".click").addEventListener("click", () => {
@@ -124,8 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Wenn es du gegen die Welt wäre, wäre ICH die Welt.",
         "Sei der Grund, warum jemand heute gescheitert ist.",
         "Sorge dafür, dass jemand heute aufgibt.",
-        "¯\\_(ツ)_/¯",
-        "707 lines of code!"
+        "¯\\_(ツ)_/¯"
     ];
 
     const quoteElement = document.getElementById("quote");
@@ -155,17 +127,4 @@ document.querySelectorAll('.icon, .icon-container').forEach(icon => {
             tooltip.style.transform = "translateX(-50%) scale(0.9)";
         }, 1500);
     });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("/api/server/")
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("online-count").textContent = data.online;
-            document.getElementById("offline-count").textContent = data.offline;
-        })
-        .catch(error => {
-            document.getElementById("online-count").textContent = "Fehler";
-            document.getElementById("offline-count").textContent = "Fehler";
-        });
 });
