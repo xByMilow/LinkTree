@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCREEN_NAME="omepage"
+SCREEN_NAME="linktree"
 
 if [ "$STY" ]; then
   exit 1
